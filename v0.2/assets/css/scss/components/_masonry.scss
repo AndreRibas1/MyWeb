@@ -1,0 +1,97 @@
+//
+// Masonry Styles //
+//
+.masonry {
+	margin: 0 -1em -2em;
+	.masonry-item {
+		margin-bottom: 2em;
+		padding: 0 1em;
+	}
+	//
+	// Masonry - Columns //
+	//
+	&.column-1 {
+		.masonry-item { width: 100%; }
+	}
+	&.column-2 {
+		@include breakpoint-above(md) {
+			.masonry-item { width: 50%; }
+		}
+	}
+	&.column-3 {
+		@include breakpoint-above(md) {
+			.masonry-item { width: 50%; }
+		}
+		@include breakpoint-above(lg) {
+			.masonry-item { width: 33.33%; }
+		}
+	}
+	&.column-4 {
+		@include breakpoint-above(sm) {
+			.masonry-item { width: 50%; }
+		}
+		@include breakpoint-above(md) {
+			.masonry-item { width: 33.33%; }
+		}
+		@include breakpoint-above(lg) {
+			.masonry-item { width: 25%; }
+		}
+	}
+	&.column-5 {
+		@extend .column-4;
+		@include breakpoint-above(xl) {
+			.masonry-item { width: 20%; }
+		}
+	}
+	&.column-6 {
+		@extend .column-4;
+		@include breakpoint-above(xl) {
+			.masonry-item { width: 16.66%; }
+		}
+	}
+	//
+	// Masonry - Item Spacings //
+	//
+	&.spacing-0 {
+		margin: 0;
+		.masonry-item {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&.spacing-1 {
+		margin: 0 -0.5em -1em;
+		.masonry-item {
+			margin-bottom: 1em;
+			padding: 0 0.5em;
+		}
+	}
+	&.spacing-2 {
+		margin: 0 -1em -2em;
+		.masonry-item {
+			margin-bottom: 2em;
+			padding: 0 1em;
+		}
+	}
+	&.spacing-3 {
+		margin: 0 -1.5em -3em;
+		.masonry-item {
+			margin-bottom: 3em;
+			padding: 0 1.5em;
+		}
+	}
+	&.spacing-4 {
+		margin: 0 -2em -4em;
+		.masonry-item {
+			margin-bottom: 4em;
+			padding: 0 2em;
+		}
+	}
+	&.spacing-5 {
+		margin: 0 -2.5em -5em;
+		.masonry-item {
+			margin-bottom: 5em;
+			padding: 0 2.5em;
+		}
+	}
+}

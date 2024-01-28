@@ -1,0 +1,73 @@
+//
+// Portfolio //
+//
+.portfolio-box {
+	position: relative;
+	a {
+		display: block;
+	}
+	.portfolio-img {
+		position: relative;
+		overflow: hidden;
+		img {
+			@include transform(scale(1));
+			width: 100%;
+			@include transition(transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+		}
+	}
+	.portfolio-title {
+		position: absolute;
+		top: auto;
+		right: 30px;
+		bottom: 30px;
+		left: 30px;
+		div {
+			@include transform(translateX(6px));
+			display: table;
+			visibility: hidden;
+			opacity: 0;
+			background: $color-white-09;
+			margin-bottom: 4px;
+			padding: 12px 20px;
+			@include transition(ease-out 0.12s);
+			&:last-child {
+				@include transition-delay(0.05s);
+				margin-bottom: 0;
+			}
+		}
+	}
+	&:hover {
+		.portfolio-img {
+			img {
+				@include transform(scale(1.04));
+			}
+		}
+		.portfolio-title {
+			div {
+				@include transform(translateX(0));
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	@include breakpoint-less(md) {
+		.portfolio-title {
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+		}
+	}
+}
+body.theme-dark, div[class*='bg-black'], div[class*='bg-dark'] {
+	.portfolio-box {
+		.portfolio-title {
+			div {
+				background: $color-black-09;
+				color: $color-white-07;
+				h1,h2,h3,h4,h5,h6 {
+					color: $color-white;
+				}
+			}
+		}
+	}
+}

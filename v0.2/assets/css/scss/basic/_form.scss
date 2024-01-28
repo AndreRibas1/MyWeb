@@ -1,0 +1,102 @@
+//
+// Forms //
+//
+input:not(.form-check-input), 
+textarea {
+	background: transparent;
+	width: 100%;
+	border: 1px solid $color-dark-01;
+	margin-bottom: 1rem;
+	padding: 15px 20px;
+	box-shadow: none;
+	font: 400 14px $font-family-primary;
+	@include transition(ease-out 0.16s);
+	&:focus, &:active {
+		outline: 0;
+		box-shadow: none;
+	}
+}
+textarea {
+	height: 160px;
+}
+input:not(.form-check-input), textarea, .form-control {
+	color: $color-primary;
+	&::-webkit-input-placeholder { color: $color-primary-lighter; }
+	&::-moz-placeholder { color: $color-primary-lighter; }
+	&:-ms-placeholder { color: $color-primary-lighter; }
+	&::-ms-placeholder { color: $color-primary-lighter; }
+	&::placeholder { color: $color-primary-lighter; }
+	&:focus {
+		border-color: $color-dark-02;
+	}
+}
+form {
+	&.style-2{
+		input:not(.form-check-input), textarea, .form-control {
+			margin-bottom: 30px;
+			padding: 0 0 10px;
+			border-top-width: 0;
+			border-right-width: 0;
+			border-bottom-width: 1px;
+			border-left-width: 0;
+			&:focus {
+				border-color: $color-dark-09;
+			}
+		}
+	}
+}
+label {
+	font-size: 14px;
+}
+.form-control {
+	background: transparent;
+	height: auto;
+	border: 1px solid $color-dark-01;
+	border-radius: 0;
+	padding: 15px 20px;
+	&:focus {
+		background: transparent;
+		box-shadow: none;
+	}
+	&:read-only {
+		background: $color-dark-01;
+		border: 0;
+	}
+	&.form-control-sm {
+		padding: 5px 10px;
+	}
+}
+.form-control-plaintext {
+	border: 0;
+}
+.required {
+	&:after {
+		content: '*';
+		padding-left: 3px;
+	}
+}
+
+body.theme-dark, div[class*='bg-black'], div[class*='bg-dark'] {
+	input:not(.form-check-input), textarea, .form-control {
+		background: transparent;
+		border-color: $color-white-01;
+		color: $color-white-07;
+		&::-webkit-input-placeholder { color: $color-white-05; }
+		&::-moz-placeholder { color: $color-white-05; }
+		&:-ms-placeholder { color: $color-white-05; }
+		&::-ms-placeholder { color: $color-white-05; }
+		&::placeholder { color: $color-white-05; }
+		&:focus {
+			border-color: $color-white-02;
+		}
+	}
+	form {
+		&.style-2 {
+			input:not(.form-check-input), textarea, .form-control {
+				&:focus {
+					border-color: $color-white;
+				}
+			}
+		}
+	}
+}

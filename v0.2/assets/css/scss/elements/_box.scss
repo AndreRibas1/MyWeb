@@ -1,0 +1,34 @@
+//
+// Box Styles //
+//
+.box-shadow {
+	@include box-shadow(0 8px 26px 0 rgba(22,24,26,0.11));
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include box-shadow(0 8px 32px 0 rgba(22,24,26,0.18));
+	}
+}
+.hover-shadow {
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include box-shadow(0 8px 26px 0 rgba(22,24,26,0.11));
+	}
+}
+.hover-float {
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include transform(translateY(-4px));
+	}
+}
+.hover-scale {
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include transform(scale(1.015));
+	}
+}
+.hover-shrink {
+	@include transition(ease-out 0.16s);
+	&:hover {
+		@include transform(scale(0.985));
+	}
+}
